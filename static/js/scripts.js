@@ -5,4 +5,10 @@
 
 $(document).ready(function(){
     $('.collapsible').collapsible();
+    $('.tooltipped').tooltip();
   });
+
+$(document).ready(function(){
+    
+});
+       
