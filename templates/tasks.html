@@ -45,6 +45,10 @@
                 <strong>{{ task.category_name }}</strong>
                 <p>{{ task.task_description }}</p>
                 <p><em>by: {{ task.created_by }}</em></p>
+                {% for x in hello %}
+                    <p>{{ x }}</p>
+                {% endfor %}
+                   
             </div>
         </li>
         {% endfor %}

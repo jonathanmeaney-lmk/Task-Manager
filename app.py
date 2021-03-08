@@ -135,6 +135,7 @@ def add_task():
             "due_date": request.form.get("due_date"),
             "created_by": session["user"]
         }
+
         mongo.db.tasks.insert_one(task)
         flash("Task Successfully Added")
         return redirect(url_for("get_tasks"))
@@ -186,4 +187,4 @@ def edit_category(category_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
